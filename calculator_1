@@ -1,0 +1,24 @@
+# Created very simple calculator to evaluate infix expression.
+expression = input()
+operator = ''
+stack = []
+
+for ch in expression:
+    if ch.isnumeric():
+        stack.append(int(ch))
+    else:
+        operator = ch
+
+# calculate answer
+b, a = stack.pop(), stack.pop()
+
+if operator=='+':
+    print(a+b)
+elif operator=='-':
+    print(a-b)
+elif operator=='*':
+    print(a*b)
+else:
+    print(a/b)
+
+    
